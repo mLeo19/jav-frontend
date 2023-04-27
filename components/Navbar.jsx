@@ -12,6 +12,7 @@ const Navbar = () => {
   const handleNav = () => {
     setNav(!nav)
   }
+  // TODO: Store navbar state and scroll position in local storage so it persists after page reload
   useEffect(() => {
     const changeColor = () => {
       if (window.scrollY >= 90) {
