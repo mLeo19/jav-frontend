@@ -4,8 +4,11 @@ import Gallery from '@/components/Gallery'
 import AboutUs from '@/components/AboutUs'
 import Services from '@/components/Services'
 import ContactUs from '@/components/ContactUs'
+import Project from '@/components/Project'
 
-export default function Home() {
+import { client } from '../lib/client'
+
+export default function Home({ projects }) {
   return (
     <>
       <Head>
@@ -16,8 +19,20 @@ export default function Home() {
       <Hero heading='JAV Contractors' message='We focus on roofing, remodeling, and general contracting'/>
       <AboutUs />
       <Services />
-      <Gallery />
+      <Gallery/>
+      <div>
+        {projects?.map((project) => <Project key={project._id} project={project} />)}
+      </div>
       <ContactUs />
     </>
   )
+}
+
+// The server fetches all content from Sanity.io
+export const getServerSideProps = async () => {
+  const query = '*[_type == "project"]';
+  const projects = await client.fetch(query);
+  return {
+    props: { projects }
+  }
 }
