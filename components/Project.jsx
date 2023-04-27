@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import { urlFor } from '@/lib/client'
+import Image from 'next/image'
 
 const Project = ({ project: { name, slug, description, image } }) => {
   return (
@@ -8,8 +9,8 @@ const Project = ({ project: { name, slug, description, image } }) => {
       {/* The Link should lead to a dynamic project route using slug */}
       <Link href='/'>
         <div>
-          <img
-            src={urlFor(image && image[0])}
+          <Image
+            src={urlFor(image && image[0]).url()}
             width={250}
             height={250}
           />
