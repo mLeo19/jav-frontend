@@ -51,10 +51,10 @@ const Navbar = () => {
           <div className={nav ? 'sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300' : 'sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300'}>
             <ul>
               <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'><Link href='/'>Home</Link></li>
-              <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'><Link href='/#about'>About Us</Link></li>
-              <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'><Link href='/#services'>Services</Link></li>
-              <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'><Link href='/#gallery'>Gallery</Link></li>
-              <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'><Link href='/#contact'>Contact Us</Link></li>
+              <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'><Link href='/#about' scroll={false}>About Us</Link></li>
+              <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'><Link href='/#services' scroll={false}>Services</Link></li>
+              <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'><Link href='/#gallery' scroll={false}>Gallery</Link></li>
+              <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'><Link href='/#contact' scroll={false}>Contact Us</Link></li>
             </ul>
           </div>
         </div>
