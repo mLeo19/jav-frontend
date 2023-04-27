@@ -7,6 +7,7 @@ import logo from '../public/jav-contractors-logo.png'
 const Navbar = () => {
   const [nav, setNav] =useState(false)
   const [color, setColor] = useState('transparent')
+  const [borderColor, setBorderColor] = useState('transparent')
   const [textColor, setTextColor] = useState('white');
   const handleNav = () => {
     setNav(!nav)
@@ -15,9 +16,11 @@ const Navbar = () => {
     const changeColor = () => {
       if (window.scrollY >= 90) {
         setColor('#ffffff')
+        setBorderColor('gray')
         setTextColor('#000000')
       } else {
         setColor('transparent')
+        setBorderColor('transparent')
         setTextColor('#ffffff')
       }
     }
@@ -26,7 +29,7 @@ const Navbar = () => {
   
   return (
     <>
-      <div style={{backgroundColor: `${color}`}} className='fixed left-0 top-0 w-full z-10 ease-in duration-300'>
+      <div style={{backgroundColor: `${color}`, borderBottomColor: `${borderColor}`}} className='fixed left-0 top-0 w-full z-10 ease-in duration-300 border-b'>
         <div className='max-w-[1240px] m-auto flex justify-between items-center p-4 text-white'>
           <Link href='/'>
             <Image
