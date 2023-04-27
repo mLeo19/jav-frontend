@@ -37,11 +37,11 @@ const Navbar = () => {
             />
           </Link>
           <ul style={{color: `${textColor}`}} className="hidden sm:flex">
-            <li className='p-4'><Link href='/' scroll={false}>Home</Link></li>
+            <li className='p-4'><Link href='/'>Home</Link></li>
             <li className='p-4'><Link href='/#about' scroll={false}>About Us</Link></li>
-            <li className='p-4'><Link href='#services'>Services</Link></li>
+            <li className='p-4'><Link href='/#services' scroll={false}>Services</Link></li>
             <li className='p-4'><Link href='/#gallery' scroll={false}>Gallery</Link></li>
-            <li className='p-4'><Link href='/#contact'>Contact Us</Link></li>
+            <li className='p-4'><Link href='/#contact' scroll={false}>Contact Us</Link></li>
           </ul>
           {/* Mobile button */}
           <div onClick={handleNav} className='block sm:hidden z-10'>

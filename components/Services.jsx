@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const Services = () => {
   return (
-    <div id='services' className='max-w-[1240px] mx-auto h-screen'>
+    <div id='services' className='max-w-[1240px] mx-auto h-screen flex justify-center items-center border-4'>
       <div>
         <h1>Services</h1>
         <div>
