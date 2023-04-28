@@ -4,7 +4,6 @@ import Gallery from '@/components/Gallery'
 import AboutUs from '@/components/AboutUs'
 import Services from '@/components/Services'
 import ContactUs from '@/components/ContactUs'
-import Project from '@/components/Project'
 
 import { client } from '../lib/client'
 
@@ -19,10 +18,7 @@ export default function Home({ projects }) {
       <Hero heading='JAV Contractors' message='We focus on roofing, remodeling, and general contracting'/>
       <AboutUs />
       <Services />
-      <Gallery/>
-      <div>
-        {projects?.map((project) => <Project key={project._id} project={project} />)}
-      </div>
+      <Gallery projects={projects}/>
       <ContactUs />
     </>
   )

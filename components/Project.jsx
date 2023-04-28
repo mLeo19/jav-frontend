@@ -1,19 +1,20 @@
-import Link from 'next/link'
 import React from 'react'
 import { urlFor } from '@/lib/client'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Project = ({ project: { name, slug, description, image } }) => {
   return (
     <div>
-      {/* The Link should lead to a dynamic project route using slug */}
-      <Link href='/'>
+      <Link href={`/project/${slug.current}`}>
         <div>
-          <Image
-            src={urlFor(image && image[0]).url()}
-            width={250}
-            height={250}
-          />
+          <div>
+            <Image
+              src={urlFor(image && image[0]).url()}
+              width={500}
+              height={500}
+            />
+          </div>
           <p>{name}</p>
           <p>{description}</p>
         </div>
@@ -23,3 +24,4 @@ const Project = ({ project: { name, slug, description, image } }) => {
 }
 
 export default Project
+
