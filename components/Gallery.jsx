@@ -20,7 +20,7 @@ const Gallery = ({projects}) => {
   return (
     <div id='gallery' className='max-w-[1240px] flex justify-center mx-auto h-screen border-4 items-center'>
       <div>
-        <h1 className='text-2xl font-bold text-center p-4'>Gallery</h1>
+        <h1 className='text-4xl font-bold text-center p-4'>Gallery</h1>
         <div className='relative flex justify-center items-center p-4'>
           <AiFillLeftCircle
             onClick={prevProject}
