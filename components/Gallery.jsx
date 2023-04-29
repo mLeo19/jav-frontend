@@ -25,6 +25,7 @@ const Gallery = ({projects}) => {
           <AiFillLeftCircle
             onClick={prevProject}
             size={50}
+            className='mr-6'
           />
           {projects?.map((project, index) => (
             <div
@@ -41,6 +42,7 @@ const Gallery = ({projects}) => {
           <AiFillRightCircle
             onClick={nextProject}
             size={50}
+            className='ml-6'
           />
         </div>
       </div>

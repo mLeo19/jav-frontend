@@ -7,12 +7,13 @@ const Project = ({ project: { name, slug, description, image } }) => {
   return (
     <div>
       <Link href={`/project/${slug.current}`}>
-        <div>
+        <div className='rounded-lg bg-slate-200 p-6 hover:scale-105 ease-in duration-100'>
           <div>
             <Image
               src={urlFor(image && image[0]).url()}
-              width={500}
-              height={500}
+              width={450}
+              height={450}
+              className='rounded-lg'
             />
           </div>
           <p>{name}</p>
