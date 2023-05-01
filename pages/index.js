@@ -7,7 +7,7 @@ import ContactUs from '@/components/ContactUs'
 
 import { client } from '../lib/client'
 
-export default function Home({ projects }) {
+export default function Home({ projects, homePageContent }) {
   return (
     <>
       <Head>
@@ -16,7 +16,7 @@ export default function Home({ projects }) {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Hero heading='JAV Contractors' message='We focus on roofing, remodeling, and general contracting'/>
-      <AboutUs />
+      <AboutUs homePageContent={homePageContent.length && homePageContent[0]}/>
       <Services />
       <Gallery projects={projects}/>
       <ContactUs />
@@ -28,7 +28,9 @@ export default function Home({ projects }) {
 export const getServerSideProps = async () => {
   const query = '*[_type == "project"]';
   const projects = await client.fetch(query);
+  const homePageQuery = '*[_type == "page" && name == "Home Page"]';
+  const homePageContent = await client.fetch(homePageQuery);
   return {
-    props: { projects }
+    props: { projects, homePageContent }
   }
 }
