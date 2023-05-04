@@ -18,7 +18,7 @@ export default function Home({ projects, homePageContent, services }) {
       <Hero heading='JAV Contractors' message='We focus on roofing, remodeling, and general contracting'/>
       <AboutUs homePageContent={homePageContent.length && homePageContent[0]}/>
       <Services services={services} homePageContent={homePageContent.length && homePageContent[0]}/>
-      <Gallery projects={projects}/>
+      <Gallery projects={projects} homePageContent={homePageContent.length && homePageContent[0]}/>
       <ContactUs />
     </>
   )

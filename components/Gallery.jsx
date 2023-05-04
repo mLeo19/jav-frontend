@@ -2,8 +2,10 @@ import React, {useState} from 'react'
 import Project from './Project'
 import Image from 'next/image'
 import { AiFillLeftCircle, AiFillRightCircle } from 'react-icons/ai'
+import { PortableText } from '@portabletext/react'
 
-const Gallery = ({projects}) => {
+const Gallery = ({projects, homePageContent}) => {
+  const {gallery_content} = homePageContent
   const [current, setCurrent] = useState(0);
   const length = projects.length;
 
@@ -21,6 +23,9 @@ const Gallery = ({projects}) => {
     <div id='gallery' className='max-w-[1240px] flex justify-center mx-auto h-screen border-4 items-center'>
       <div>
         <h1 className='text-4xl font-bold text-center p-4'>Gallery</h1>
+        <div className='w-96 border-4'>
+          <PortableText value={gallery_content} />
+        </div>
         <div className='relative flex justify-center items-center p-4'>
           <AiFillLeftCircle
             onClick={prevProject}
