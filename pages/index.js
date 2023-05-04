@@ -7,7 +7,7 @@ import ContactUs from '@/components/ContactUs'
 
 import { client } from '../lib/client'
 
-export default function Home({ projects, homePageContent }) {
+export default function Home({ projects, homePageContent, services }) {
   return (
     <>
       <Head>
@@ -17,7 +17,7 @@ export default function Home({ projects, homePageContent }) {
       </Head>
       <Hero heading='JAV Contractors' message='We focus on roofing, remodeling, and general contracting'/>
       <AboutUs homePageContent={homePageContent.length && homePageContent[0]}/>
-      <Services />
+      <Services services={services} homePageContent={homePageContent.length && homePageContent[0]}/>
       <Gallery projects={projects}/>
       <ContactUs />
     </>
@@ -30,7 +30,9 @@ export const getServerSideProps = async () => {
   const projects = await client.fetch(query);
   const homePageQuery = '*[_type == "page" && name == "Home Page"]';
   const homePageContent = await client.fetch(homePageQuery);
+  const sQuery = '*[_type == "service"]';
+  const services = await client.fetch(sQuery);
   return {
-    props: { projects, homePageContent }
+    props: { projects, homePageContent, services }
   }
 }
