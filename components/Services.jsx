@@ -6,7 +6,7 @@ import Service from './Service'
 const Services = ({ services, homePageContent }) => {
   const {services_content} = homePageContent
   return (
-    <div id='services' className='max-w-[1240px] mx-auto h-screen flex justify-center items-center border-4'>
+    <div id='services' className='max-w-[1240px] mx-auto h-screen flex justify-center items-center border-4 mt-32'>
       <div>
         <h1 className='flex justify-center border-2 pb-7'>Services</h1>
         <div className='w-96 border-4'>
