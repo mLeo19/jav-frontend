@@ -9,7 +9,7 @@ const Services = ({ services, homePageContent }) => {
     <div id='services' className='max-w-[1240px] mx-auto h-screen flex justify-center items-center border-4 mt-32'>
       <div>
         <h1 className='flex justify-center border-2 pb-7'>Services</h1>
-        <div className='w-96 border-4'>
+        <div className='w-96 border-4 mx-auto'>
           <PortableText value={services_content} />
         </div>
         <div className='flex justify-center items-center'>

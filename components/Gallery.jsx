@@ -23,7 +23,7 @@ const Gallery = ({projects, homePageContent}) => {
     <div id='gallery' className='max-w-[1240px] flex justify-center mx-auto h-screen border-4 items-center'>
       <div>
         <h1 className='text-4xl font-bold text-center p-4'>Gallery</h1>
-        <div className='w-96 border-4'>
+        <div className='w-96 border-4 mx-auto'>
           <PortableText value={gallery_content} />
         </div>
         <div className='relative flex justify-center items-center p-4'>

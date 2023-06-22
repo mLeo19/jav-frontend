@@ -25,7 +25,8 @@ const AboutUs = ({ homePageContent }) => {
           {/* The div below holds the heading, portable text and the button(s) */}
           <div className='border-4 md:w-1/2'>
             <h1 className='text-blue-500 font-extrabold text-4xl flex justify-center border-2 mx-auto px-12 md:text-4xl md:px-6 lg:text-2xl'>
-              {about_us_heading}
+              {/*about_us_heading*/}
+              Turn Your Dream Project Into a Reality
             </h1>
             <div className='h-46 border-4 px-14 mt-5 text-lg text-gray-500 md:text-base md:px-7 lg:text-lg'>
               <PortableText value={about_us_content} />
