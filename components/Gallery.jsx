@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import Project from './Project'
+import Carousel from './Carousel'
 import Image from 'next/image'
 import { AiFillLeftCircle, AiFillRightCircle } from 'react-icons/ai'
 import { PortableText } from '@portabletext/react'
@@ -51,6 +52,9 @@ const Gallery = ({projects, homePageContent}) => {
           />
         </div>
       </div>
+      
+      
+
     </div>
   )
 }
